@@ -9,6 +9,7 @@ Source0:	http://members.chello.se/jonas.thornqvist/PDITOOL.zip
 # Source0-md5:	55c11c218e79208e0ea5c94b27ba5cd2
 Patch0:		%{name}-LFS.patch
 URL:		http://members.chello.se/jonas.thornqvist/
+BuildRequires:	unzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
