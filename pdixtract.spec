@@ -1,5 +1,5 @@
 Summary:	Convert Pinnacle Disk Images to ISO9660 or extract files
-Summary(pl):	Konwersja oprazów dysków Pinnacle do ISO9660 i wyci±ganie plików
+Summary(pl):	Konwersja obrazów dysków Pinnacle do ISO9660 i wyci±ganie plików
 Name:		pdixtract
 Version:	1.5
 Release:	1
