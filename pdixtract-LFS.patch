@@ -1,0 +1,39 @@
+--- pdixtract.c	2003-02-27 16:08:50.000000000 +0100
++++ pdixtract.c.new	2004-04-13 19:23:59.718891792 +0200
+@@ -25,6 +25,9 @@
+ constructing it invoke the pdixtract executable bring any other part of the
+ program under the GPL.
+ */
++
++#define _LARGEFILE64_SOURCE
++
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h>
+@@ -207,7 +210,7 @@
+   current_segment++;
+   snprintf(current_file,sizeof(current_file)-1,
+            "%s%02i",infile,current_segment);
+-  fin=open(current_file,O_RDONLY+O_BINARY);
++  fin=open(current_file,O_RDONLY|O_BINARY|O_LARGEFILE);
+   if(fin<0)
+     errexit(current_file);
+   fprintf(stderr,"(%s)",current_file);
+@@ -366,7 +369,7 @@
+     usage();
+   }
+   infile=file_with_ext(argv[argi],".pdi");
+-  fin=open(infile,O_RDONLY+O_BINARY);
++  fin=open(infile,O_RDONLY|O_BINARY|O_LARGEFILE);
+   if(fin<0)
+     errexit(infile);
+   fdscno=pdi_read_dir(fin);
+@@ -454,7 +457,7 @@
+       else
+         strncpy(outname,files[i].name,sizeof(outname)-1);
+       fprintf(stderr,"writing %s (%i extents) ",outname,files[i].size);
+-      fout=open(outname,O_TRUNC+O_WRONLY+O_CREAT+O_BINARY,S_IWUSR+S_IRUSR);
++      fout=open(outname,O_TRUNC|O_WRONLY|O_CREAT|O_BINARY|O_LARGEFILE,S_IWUSR+S_IRUSR);
+       if(fout<0)
+         errexit(files[i].name);
+       write_to_file(fout,files[i].extent,files[i].size);
