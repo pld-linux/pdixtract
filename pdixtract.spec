@@ -1,5 +1,5 @@
 Summary:	Convert Pinnacle Disk Images to ISO9660 or extract files
-Summary(pl):	Konwersja obraz體 dysk體 Pinnacle do ISO9660 i wyci眊anie plik體
+Summary(pl.UTF-8):   Konwersja obraz贸w dysk贸w Pinnacle do ISO9660 i wyci膮ganie plik贸w
 Name:		pdixtract
 Version:	1.5
 Release:	1
@@ -16,10 +16,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Convert Pinnacle Disk Images (i.e. .pdi file sets) to ISO9660 files
 or extract files from the file sets.
 
-%description -l pl
-Narz阣zie do konwersji obraz體 dysk體 Pinnacle (zbior體 plik體 .pdi,
-czyli Pinnacle Disk Images) do plik體 ISO9660 oraz wyci眊ania plik體
-ze zbior體 plik體.
+%description -l pl.UTF-8
+Narz臋dzie do konwersji obraz贸w dysk贸w Pinnacle (zbior贸w plik贸w .pdi,
+czyli Pinnacle Disk Images) do plik贸w ISO9660 oraz wyci膮gania plik贸w
+ze zbior贸w plik贸w.
 
 %prep
 %setup -qc
